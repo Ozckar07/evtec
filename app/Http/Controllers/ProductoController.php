@@ -15,7 +15,8 @@ class ProductoController extends Controller
     ///////////Mostrar una lista de productos. /////////////
     public function productos(Request $request)
     {
-        $productos = Producto::all();
+        // $productos = Producto::all();
+        $productos = Producto::with('categoria')->paginate(10);
         return response()->json($productos);
     }
 
@@ -34,12 +35,18 @@ class ProductoController extends Controller
         $request->validate([
             'nombre' => 'required',
             'precio' => 'required',
+            // Valida si la categoría existe en la tabla categorias
+            'categoria_id' => 'nullable|exists:categorias,id', 
         ]);
 
         $producto = new Producto([
             'nombre' => $request->nombre,
             'descripcion' => $request->descripcion,
             'precio' => $request->precio,
+            'codigo' => $request->codigo,
+            'estado' => $request->estado,
+            'stock' => $request->stock,
+            'categoria_id' => $request->categoria_id,
         ]);
 
         $producto->save();
@@ -60,6 +67,10 @@ class ProductoController extends Controller
         $producto->nombre = $request->nombre;
         $producto->descripcion = $request->descripcion;
         $producto->precio = $request->precio;
+        $producto->codigo = $request->codigo;
+        $producto->estado = $request->estado;
+        $producto->stock = $request->stock;
+        $producto->categoria_id = $request->categoria_id;
         $producto->save();
         return response()->json($producto);
     }

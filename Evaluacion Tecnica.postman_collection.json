@@ -34,22 +34,42 @@
 					"formdata": [
 						{
 							"key": "id",
-							"value": "2",
+							"value": "24",
 							"type": "text"
 						},
 						{
 							"key": "nombre",
-							"value": "producto2",
+							"value": "24 producto",
 							"type": "text"
 						},
 						{
 							"key": "descripcion",
-							"value": "descripcion del producto",
+							"value": "descripcion del producto 3",
 							"type": "text"
 						},
 						{
 							"key": "precio",
 							"value": "5.25",
+							"type": "text"
+						},
+						{
+							"key": "codigo",
+							"value": "2543",
+							"type": "text"
+						},
+						{
+							"key": "estado",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "stock",
+							"value": "245",
+							"type": "text"
+						},
+						{
+							"key": "categoria_id",
+							"value": "3",
 							"type": "text"
 						}
 					]
@@ -68,7 +88,7 @@
 					"formdata": []
 				},
 				"url": {
-					"raw": "http://127.0.0.1/api/productos/1?id=1&nombre=nombre de producto modificado&descripcion=descripcion modificada&precio=8.42",
+					"raw": "http://127.0.0.1/api/productos/1?id=2&nombre=ejemplo de edicion&descripcion=descripcion modificada&precio=8.42&codigo=2554&estado=1&stock=854&categoria_id=2",
 					"protocol": "http",
 					"host": [
 						"127",
@@ -84,11 +104,11 @@
 					"query": [
 						{
 							"key": "id",
-							"value": "1"
+							"value": "2"
 						},
 						{
 							"key": "nombre",
-							"value": "nombre de producto modificado"
+							"value": "ejemplo de edicion"
 						},
 						{
 							"key": "descripcion",
@@ -97,6 +117,22 @@
 						{
 							"key": "precio",
 							"value": "8.42"
+						},
+						{
+							"key": "codigo",
+							"value": "2554"
+						},
+						{
+							"key": "estado",
+							"value": "1"
+						},
+						{
+							"key": "stock",
+							"value": "854"
+						},
+						{
+							"key": "categoria_id",
+							"value": "2"
 						}
 					]
 				}
