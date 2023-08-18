@@ -1,0 +1,116 @@
+{
+	"info": {
+		"_postman_id": "e79f111e-b8fd-473c-969f-a346ca859dc6",
+		"name": "Evaluacion Tecnica",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "21908953"
+	},
+	"item": [
+		{
+			"name": "Mostrar Productos",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://127.0.0.1/api/productos"
+			},
+			"response": []
+		},
+		{
+			"name": "Mostrar propducto especifico",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://127.0.0.1/api/productos/2"
+			},
+			"response": []
+		},
+		{
+			"name": "Crear producto",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "id",
+							"value": "2",
+							"type": "text"
+						},
+						{
+							"key": "nombre",
+							"value": "producto2",
+							"type": "text"
+						},
+						{
+							"key": "descripcion",
+							"value": "descripcion del producto",
+							"type": "text"
+						},
+						{
+							"key": "precio",
+							"value": "5.25",
+							"type": "text"
+						}
+					]
+				},
+				"url": "http://127.0.0.1/api/productos"
+			},
+			"response": []
+		},
+		{
+			"name": "Modificar producto",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "http://127.0.0.1/api/productos/1?id=1&nombre=nombre de producto modificado&descripcion=descripcion modificada&precio=8.42",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"path": [
+						"api",
+						"productos",
+						"1"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "1"
+						},
+						{
+							"key": "nombre",
+							"value": "nombre de producto modificado"
+						},
+						{
+							"key": "descripcion",
+							"value": "descripcion modificada"
+						},
+						{
+							"key": "precio",
+							"value": "8.42"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "elimina el producto",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": "http://127.0.0.1/api/productos/1"
+			},
+			"response": []
+		}
+	]
+}
